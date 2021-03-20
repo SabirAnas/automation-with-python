@@ -1,6 +1,6 @@
 #tihs little project maked by Anas Sabir
 
-#هذه قاعدة بيانات بسيطة لتطبقينا تتضمن اسم الملف وصيغ الملفات التي يجب ان تحتويها
+#This is a simple database for our application that includes the foldername ==> file formats it should contain
 data  = {'pdfs':['pdf'],
          'images':['jpg','png','jpeg','PNG'],
          'exels':['xlsx'],
@@ -9,9 +9,9 @@ data  = {'pdfs':['pdf'],
          'videos':['3gp','mp4'],
          'python':['py'],
          'texts':['txt']}
-path = str(input('enter the path of place that u want arrangement it with change \ to / like : xx/xx/xx:'))
+path = str(input('enter the path of place that u want arrangement it with change \ to / like : xx/xx/xx:')) #that input return a path where we want arranging it
 import os
-os.chdir(f'{path}') #نخصص التطبيق لسطح المكتب فقط عبر هذه الدالة
+os.chdir(f'{path}')
 for elements_in_desktop in os.listdir():
     split_elements = elements_in_desktop.split('.')
     for name_folder in data.keys():
